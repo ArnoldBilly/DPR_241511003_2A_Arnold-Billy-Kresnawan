@@ -103,7 +103,7 @@
         <a href="<?= site_url('user/courses') ?>">Daftar Course</a> |
         <a href="<?= site_url('user/mycourses') ?>">Course Saya</a> |
         <a href="<?= site_url('user') ?>">Main Menu</a> |
-        <a href="<?= site_url('logout') ?>">Logout</a>
+
     </nav>
     <hr>
     <div class="content">

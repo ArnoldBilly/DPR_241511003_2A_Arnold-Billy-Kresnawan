@@ -21,6 +21,7 @@
 
     <div class="content">
         <?php echo $content ?>
+        <a href="<?= site_url('/logout') ?>">Logout</a>
     </div>
 
     <div class="footer">

@@ -43,7 +43,37 @@ class Admin extends BaseController
         $model->insert($data);
         return redirect()->to('/admin');
     }
-    
+
+    public function edit($id_anggota)
+    {
+        $model = new AnggotaModels();
+        $anggota = $model->find($id_anggota);
+
+        $data = [
+            'title' => 'Edit Anggota DPR',
+            'content' => view('adminedit', ['anggota' => $anggota]),
+        ];
+
+        return view('admin', $data);
+    }
+
+    public function update($id_anggota)
+    {
+        $model = new AnggotaModels();
+
+        $data = [
+            'nama_depan' => $this->request->getPost('nama_depan'),
+            'nama_belakang' => $this->request->getPost('nama_belakang'),
+            'gelar_depan' => $this->request->getPost('gelar_depan'),
+            'gelar_belakang' => $this->request->getPost('gelar_belakang'),
+            'jabatan' => $this->request->getPost('jabatan'),
+            'status_pernikahan' => $this->request->getPost('status'),
+        ];
+
+        $model->update($id_anggota, $data);
+        return redirect()->to('/admin');
+    }
+
     public function delete($id_anggota)
     {
         $model = new AnggotaModels();

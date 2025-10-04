@@ -23,6 +23,9 @@ $routes->group('admin', ['filter' => 'auth'], function($routes) {
     $routes->get('gaji/input', 'KomponenGaji::input');
     $routes->post('gaji/store', 'KomponenGaji::store');
     $routes->get('gaji/details/(:segment)', 'KomponenGaji::details/$1');
+    $routes->get('gaji/edit/(:segment)', 'KomponenGaji::edit/$1');
+    $routes->post('gaji/update/(:segment)', 'KomponenGaji::update/$1');
+    $routes->get('gaji/delete/(:segment)', 'KomponenGaji::delete/$1');
 });
 
 $routes->group('user', ['filter' => 'auth'], function($routes) {

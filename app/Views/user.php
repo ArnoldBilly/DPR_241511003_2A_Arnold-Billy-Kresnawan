@@ -97,17 +97,49 @@
             padding-bottom: 10px;
             border-bottom: 2px solid #e9ecef;
         }
+        a { 
+            text-decoration:none; 
+            color:#007bff; 
+        }
+        a:hover { 
+            text-decoration:underline; 
+        }
+        .footer { 
+            background:#333; 
+            color:#fff; 
+            text-align:center; 
+            padding:10px; 
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        table th {
+            background: #343a40;
+            color: #fff;
+        }
     </style>
     <h1 class="title"><?= $title ?></h1>
     <nav>
-        <a href="<?= site_url('user/courses') ?>">Daftar Course</a> |
-        <a href="<?= site_url('user/mycourses') ?>">Course Saya</a> |
-        <a href="<?= site_url('user') ?>">Main Menu</a> |
-
+        <a href="<?= site_url('user/anggotadpr') ?>">Daftar Anggota DPR</a> |
+        <a href="<?= site_url('user/penggajiandpr') ?>">Lihat Penggajian Anggota DPR</a> |
+        <a href="<?= base_url('/logout') ?>">Logout</a>
     </nav>
     <hr>
     <div class="content">
         <?= $content ?>
+    </div>
+
+    <div class="footer">
+        <p>&copy; <?= date('Y') ?> My Website</p>
     </div>
 
     <script>

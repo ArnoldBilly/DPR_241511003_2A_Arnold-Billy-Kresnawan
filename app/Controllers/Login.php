@@ -29,6 +29,7 @@ class Login extends BaseController
                     'isLoggedIn'    => true
                 ]);
 
+                // Verifikasi role dan redirect sesuai role pengguna
                 if ($user['role'] === 'admin') {
                     return redirect()->to('/admin');
                 } else {

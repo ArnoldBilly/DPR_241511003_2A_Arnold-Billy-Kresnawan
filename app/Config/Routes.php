@@ -31,9 +31,13 @@ $routes->group('admin', ['filter' => 'auth'], function($routes) {
     $routes->get('penggajian/details/(:segment)', 'Penggajian::details/$1');
     $routes->get('penggajian/edit/(:segment)', 'Penggajian::edit/$1');
     $routes->post('penggajian/update/(:segment)', 'Penggajian::update/$1');
-    $routes->get('penggajian/delete/(:segment)', 'Penggajian::delete/$1');
+    $routes->get('penggajian/deleteKomponen/(:segment)/(:segment)', 'Penggajian::deleteKomponen/$1/$2');
 });
 
 $routes->group('user', ['filter' => 'auth'], function($routes) {
     $routes->get('/', 'User::dashboard');
+    $routes->get('anggotadpr', 'User::lihatdata');
+    $routes->get('anggota/details/(:segment)', 'User::lihatdatadetails/$1');
+    $routes->get('penggajiandpr', 'User::lihatpenggajian');
+    $routes->get('penggajian/details/(:segment)', 'User::penggajiandetails/$1');
 });

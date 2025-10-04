@@ -18,12 +18,10 @@
                         : "Belum Mengambil Penghasilan" ?>
                 </td>
                 <td>
-                    <a href="<?= base_url('admin/penggajian/ambil/'.$pgj['id_anggota'])?>">Ambil Tunjangan</a> |
-                    <a href="<?= base_url('admin/penggajian/details/'.$pgj['id_anggota']) ?>">Detail</a> |
-                    <a href="<?= base_url('admin/penggajian/edit/'.$pgj['id_anggota']) ?>">Edit</a>
+                    <a href="<?= base_url('user/penggajian/details/'.$pgj['id_anggota']) ?>">Detail</a>
             </tr>
         <?php endforeach; ?>
     <?php endif; ?>
 </table>
-<br>
-<a href="<?= site_url('/admin') ?>">Kembali ke Home Page</a>
+
+<a href="<?= site_url('/user') ?>">Kembali ke Home Page</a>

@@ -1,3 +1,37 @@
+<style>
+    h2 { 
+        text-align: center; 
+        color: #333; 
+    } 
+    form { 
+        max-width: 500px; 
+        margin: 20px auto; 
+        padding: 20px; 
+        background: #fff; 
+        border-radius: 8px; 
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1); 
+        }
+
+    input[type="text"], input[type="number"] { 
+        width: 100%; 
+        padding: 8px; 
+        margin-bottom: 10px; 
+        border: 1px solid #ccc; 
+        border-radius: 4px; 
+        box-sizing: border-box; 
+    }
+
+    button { 
+        width: 100%; 
+        padding: 10px; 
+        background: #007bff; 
+        border: none; 
+        color: #fff; 
+        font-weight: bold; 
+        border-radius: 4px; 
+        cursor: pointer; 
+    }
+</style>
 <body>
     <h2>Tambah Anggota DPR</h2>
     <form id="formTambahDPR" action="<?= site_url('/admin/gaji/update/' .$komponen['id_komponen_gaji']) ?>" method="post">

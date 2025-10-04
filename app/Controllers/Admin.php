@@ -43,6 +43,7 @@ class Admin extends BaseController
     {
         $model = new AnggotaModels();
 
+        // Menangkap data dari form
         $data = [
             'nama_depan' => $this->request->getPost('nama_depan'),
             'nama_belakang' => $this->request->getPost('nama_belakang'),
@@ -52,6 +53,7 @@ class Admin extends BaseController
             'status_pernikahan' => $this->request->getPost('status'),
         ];
 
+        // Menyimpan data ke database
         $model->insert($data);
         return redirect()->to('/admin');
     }
@@ -73,6 +75,7 @@ class Admin extends BaseController
     {
         $model = new AnggotaModels();
 
+        // Menangkap data dari form
         $data = [
             'nama_depan' => $this->request->getPost('nama_depan'),
             'nama_belakang' => $this->request->getPost('nama_belakang'),

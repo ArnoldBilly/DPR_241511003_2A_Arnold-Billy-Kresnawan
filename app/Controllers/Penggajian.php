@@ -131,7 +131,7 @@ class Penggajian extends BaseController
 
         return redirect()->to('/admin/datapenggajian')->with('success', 'Data penggajian berhasil diupdate');
     }
-    
+
     public function details($id_anggota)
     {
         $anggotaModel = new AnggotaModels();
@@ -165,14 +165,29 @@ class Penggajian extends BaseController
         return view('admin', $data);
     }
 
-    public function delete($id_anggota)
+    public function deleteKomponen($id_anggota, $id_komponen_gaji)
     {
         $penggajianModel = new PenggajianModels();
 
-        // Hapus semua komponen gaji untuk anggota tersebut
-        $penggajianModel->where('id_anggota', $id_anggota)->delete();
+        // Cari data yang sesuai
+        $komponen = $penggajianModel
+            ->where('id_anggota', $id_anggota)
+            ->where('id_komponen_gaji', $id_komponen_gaji)
+            ->first();
 
-        return redirect()->to('/admin/datapenggajian')->with('success', 'Data penggajian berhasil dihapus');
+        if ($komponen) {
+            // Hapus data
+            $penggajianModel
+                ->where('id_anggota', $id_anggota)
+                ->where('id_komponen_gaji', $id_komponen_gaji)
+                ->delete();
+
+            return redirect()->to('/admin/penggajian/edit/'.$id_anggota)
+                ->with('success', 'Komponen gaji berhasil dihapus.');
+        } else {
+            return redirect()->to('/admin/penggajian/edit/'.$id_anggota)
+                ->with('error', 'Komponen gaji tidak ditemukan.');
+        }
     }
 
 }

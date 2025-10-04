@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Controllers;
-use App\Models\UserModels;
 use App\Models\AnggotaModels;
 
 class Admin extends BaseController
@@ -22,6 +21,19 @@ class Admin extends BaseController
         $data = [
             'title' => 'Input Anggota DPR',
             'content' => view('inputanggota'),
+        ];
+
+        return view('admin', $data);
+    }
+
+    public function details($id_anggota)
+    {
+        $model = new AnggotaModels();
+        $anggota = $model->find($id_anggota);
+
+        $data = [
+            'title' => 'Detail Anggota DPR',
+            'content' => view('detailanggota', ['anggota' => $anggota]),
         ];
 
         return view('admin', $data);
@@ -72,6 +84,26 @@ class Admin extends BaseController
 
         $model->update($id_anggota, $data);
         return redirect()->to('/admin');
+    }
+
+    public function komponengaji()
+    {
+        $data = [
+            'title' => 'Komponen Gaji',
+            'content' => 'Isi komponen gaji disini'
+        ];
+
+        return view('admin', $data);
+    }
+
+    public function datapenggajian()
+    {
+        $data = [
+            'title' => 'Data Penggajian',
+            'content' => 'Isi data penggajian disini'
+        ];
+
+        return view('admin', $data);
     }
 
     public function delete($id_anggota)

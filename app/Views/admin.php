@@ -19,9 +19,15 @@
         <h2>APLIKASI PENGHITUNGAN & TRANSPARANSI GAJI DPR</h2>
     </div>
 
+    <div class="menu">
+        <a href="<?= base_url('/admin/komponengaji') ?>">Komponen Gaji</a>
+        <a href="<?= base_url('admin/datapenggajian') ?>">Data Penggajian</a>
+        <a href="<?= base_url('/admin') ?>">Home</a>
+        <a href="<?= base_url('/logout') ?>">Logout</a>
+    </div>
+
     <div class="content">
         <?php echo $content ?>
-        <a href="<?= site_url('/logout') ?>">Logout</a>
     </div>
 
     <div class="footer">

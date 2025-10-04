@@ -18,5 +18,5 @@
             <td><?= esc($anggota['status_pernikahan']) ?></td>
         </tr>
     </table>
-    <p><a href="<?= site_url('/user')?>">Kembali</a></p>
+    <p><a href="<?= site_url('/user/anggotadpr')?>">Kembali</a></p>
 </div>

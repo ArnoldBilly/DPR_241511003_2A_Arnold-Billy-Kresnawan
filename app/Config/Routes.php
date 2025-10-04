@@ -35,7 +35,6 @@ $routes->group('admin', ['filter' => 'auth'], function($routes) {
 });
 
 $routes->group('user', ['filter' => 'auth'], function($routes) {
-    $routes->get('/', 'User::dashboard');
     $routes->get('anggotadpr', 'User::lihatdata');
     $routes->get('anggota/details/(:segment)', 'User::lihatdatadetails/$1');
     $routes->get('penggajiandpr', 'User::lihatpenggajian');

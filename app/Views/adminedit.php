@@ -36,6 +36,12 @@
         <input type="radio" name="status" value="Belum Kawin" id="status_belum"
             <?= ($anggota['status_pernikahan'] ?? '') === 'Belum Kawin' ? 'checked' : '' ?>>
         <label for="status_belum">Belum Kawin</label><br>
+        <input type="radio" name="status" value="Cerai Hidup" id="status"
+            <?= ($anggota['status_pernikahan'] ?? '') === 'Cerai Hidup' ? 'checked' : '' ?>>
+        <label for="ceraihidup"></label>Cerai Hidup<br>
+        <input type="radio" name="status" value="Cerai Mati" id="status"
+            <?= ($anggota['status_pernikahan'] ?? '') === 'Cerai Mati' ? 'checked' : '' ?>>
+        <label for="ceraimati">Cerai Mati</label><br>
         <span id="statusError" style="color:red"></span><br><br>
 
         <button type="submit">Simpan</button>

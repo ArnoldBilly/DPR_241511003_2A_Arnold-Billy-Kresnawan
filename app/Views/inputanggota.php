@@ -31,6 +31,10 @@
         <label for="kawin"></label>Kawin<br>
         <input type="radio" name="status" value="Belum Kawin" id="status">
         <label for="belumkawin">Belum Kawin</label><br>
+        <input type="radio" name="status" value="Cerai Hidup" id="status">
+        <label for="ceraihidup"></label>Cerai Hidup<br>
+        <input type="radio" name="status" value="Cerai Mati" id="status">
+        <label for="ceraimati">Cerai Mati</label><br>
         <span id="statusError" style="color:red"></span><br><br>
         
         <button type="submit">Simpan</button>

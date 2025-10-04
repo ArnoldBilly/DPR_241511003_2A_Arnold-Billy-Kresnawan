@@ -9,9 +9,12 @@
         <input type="radio" name="kategori" value="Gaji Pokok" id="kategori" 
             <?= ($komponen['kategori'] ?? '') === 'Gaji Pokok' ? 'checked' : '' ?>>
         <label for="gajipokok"></label>Gaji Pokok<br>
-        <input type="radio" name="kategori" value="Tunjangan" id="kategori" 
-            value="<?= ($komponen['kategori'] ?? '') === 'Tunjangan' ? 'checked' : '' ?>">
-        <label for="tunjangan"></label>Tunjangan<br>
+        <input type="radio" name="kategori" value="Tunjangan Melekat" id="kategori" 
+            value="<?= ($komponen['kategori'] ?? '') === 'Tunjangan Melekat' ? 'checked' : '' ?>">
+        <label for="tunjangan"></label>Tunjangan Melekat<br>
+        <input type="radio" name="kategori" value="Tunjangan Lain" id="kategori" 
+            value="<?= ($komponen['kategori'] ?? '') === 'Tunjangan Lain' ? 'checked' : '' ?>">
+        <label for="tunjangan"></label>Tunjangan Lain<br>        
         <span id="statusError" style="color:red"></span><br>
 
         <label>Jabatan</label><br>
@@ -36,6 +39,9 @@
         <label for="bulan">Bulanan</label><br>
         <input type="radio" name="satuan" value="Tahun" id="satuan"
             <?= ($komponen['satuan'] ?? '') === 'Tahun' ? 'checked' : '' ?>>
+        <label for="tahun">Tahunan</label><br>
+        <input type="radio" name="satuan" value="Periode" id="satuan"
+            <?= ($komponen['satuan'] ?? '') === 'Periode' ? 'checked' : '' ?>>
         <label for="tahun">Tahunan</label><br>
         <span id="jabatanError" style="color:red"></span><br>
         <button type="submit">Simpan</button>

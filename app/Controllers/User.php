@@ -6,6 +6,10 @@ class User extends BaseController
 {
     public function dashboard(): string
     {
-        return view('user');
+        $data = [
+            'title' => 'Dashboard User',
+            'content' => 'Testing'
+        ];
+        return view('user', $data);
     }
 }

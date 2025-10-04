@@ -20,3 +20,5 @@
             <?php endforeach; ?>
         <?php endif; ?>
     </table>
+
+    <a href="<?= site_url('/admin') ?>">Kembali ke Home Page</a>
